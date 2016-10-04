@@ -209,4 +209,17 @@ class Flight
     {
         return $this->flight;
     }
+
+    /**
+     * Set flight
+     *
+     * @param \WCS\CoavBundle\Entity\Reservation $flight
+     * @return Flight
+     */
+    public function setFlight(\WCS\CoavBundle\Entity\Reservation $flight = null)
+    {
+        $this->flight = $flight;
+
+        return $this;
+    }
 }
