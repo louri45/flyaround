@@ -17,3 +17,5 @@ wcs_coav_terrain:
 wcs_coav_reservation:
         resource: "@WCSCoavBundle/Resources/config/routing/reservation.yml"
         prefix:   /reservation
+
+
