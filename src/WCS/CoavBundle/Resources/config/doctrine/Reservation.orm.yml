@@ -21,3 +21,12 @@ WCS\CoavBundle\Entity\Reservation:
             targetEntity: User
             mappedBy: reservation
 
+    manyToOne:
+        flight:
+            targetEntity: WCS\CoavBundle\Entity\Flight
+            mappedBy: flight
+
+
+
+
+

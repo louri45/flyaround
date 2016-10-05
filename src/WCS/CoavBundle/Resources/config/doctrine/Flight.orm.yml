@@ -26,4 +26,12 @@ WCS\CoavBundle\Entity\Flight:
         arrival:
             targetEntity: WCS\CoavBundle\Entity\Terrain
             inversedBy: arrivals
+        model:
+            targetEntity: WCS\CoavBundle\Entity\PlaneModel
+            inversedBy: models
+
+    oneToMany:
+        flight:
+            targetEntity: WCS\CoavBundle\Entity\Reservation
+            mappedBy: flights
 

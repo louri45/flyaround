@@ -9,6 +9,11 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class PlaneModel
 {
+    public function __toString()
+    {
+        return $this->model;
+
+    }
     /**
      * @var int
      */
@@ -164,4 +169,51 @@ class PlaneModel
     {
         return $this->status;
     }
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+
+    private $models;
+
+
+    /**
+     * Add models
+     *
+     * @param \WCS\CoavBundle\Entity\Flight $models
+     * @return PlaneModel
+     */
+    public function addModel(\WCS\CoavBundle\Entity\Flight $models)
+    {
+        $this->models[] = $models;
+
+        return $this;
+    }
+
+    /**
+     * Remove models
+     *
+     * @param \WCS\CoavBundle\Entity\Flight $models
+     */
+    public function removeModel(\WCS\CoavBundle\Entity\Flight $models)
+    {
+        $this->models->removeElement($models);
+    }
+
+    /**
+     * Get models
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getModels()
+    {
+        return $this->models;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->models = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
 }

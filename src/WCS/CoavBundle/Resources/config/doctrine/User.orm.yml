@@ -1,7 +1,7 @@
-# src/WCS/CoavBundle/Resources/config/doctrine/User.orm.yml
-
 WCS\CoavBundle\Entity\User:
     type: entity
+    table: null
+    repositoryClass: WCS\CoavBundle\Repository\UserRepository
     id:
         id:
             type: integer
@@ -14,7 +14,7 @@ WCS\CoavBundle\Entity\User:
             length: 255
     lifecycleCallbacks: {  }
 
-    manyToMany:
-        reservations:
-            targetEntity: WCS\CoavBundle\Entity\Reservation
-            inversedBy: passengers
+manyToMany:
+    reservations:
+        targetEntity: WCS\CoavBundle\Entity\Reservation
+        inversedBy: passengers

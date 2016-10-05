@@ -9,9 +9,6 @@ WCS\CoavBundle\Entity\PlaneModel:
             generator:
                 strategy: AUTO
     fields:
-        model:
-            type: string
-            length: 255
         manufacturer:
             type: string
             length: 255
@@ -26,3 +23,8 @@ WCS\CoavBundle\Entity\PlaneModel:
             type: string
             length: 255
     lifecycleCallbacks: {  }
+
+    oneToMany:
+        models:
+          targetEntity: WCS\CoavBundle\Entity\Flight
+          mappedBy: model

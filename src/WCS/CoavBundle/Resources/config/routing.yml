@@ -18,5 +18,7 @@ wcs_coav_reservation:
         resource: "@WCSCoavBundle/Resources/config/routing/reservation.yml"
         prefix:   /reservation
 
-
+wcs_coav_user:
+        resource: "@WCSCoavBundle/Resources/config/routing/user.yml"
+        prefix:   /user
 

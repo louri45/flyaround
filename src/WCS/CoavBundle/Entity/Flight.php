@@ -9,6 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Flight
 {
+    
     /**
      * @var int
      */
@@ -221,5 +222,61 @@ class Flight
         $this->flight = $flight;
 
         return $this;
+    }
+    /**
+     * @var \WCS\CoavBundle\Entity\PlaneModel
+     */
+    private $plane;
+
+
+    /**
+     * Set plane
+     *
+     * @param \WCS\CoavBundle\Entity\PlaneModel $plane
+     * @return Flight
+     */
+    public function setPlane(\WCS\CoavBundle\Entity\PlaneModel $plane = null)
+    {
+        $this->plane = $plane;
+
+        return $this;
+    }
+
+    /**
+     * Get plane
+     *
+     * @return \WCS\CoavBundle\Entity\PlaneModel 
+     */
+    public function getPlane()
+    {
+        return $this->plane;
+    }
+    /**
+     * @var \WCS\CoavBundle\Entity\PlaneModel
+     */
+    private $model;
+
+
+    /**
+     * Set model
+     *
+     * @param \WCS\CoavBundle\Entity\PlaneModel $model
+     * @return Flight
+     */
+    public function setModel(\WCS\CoavBundle\Entity\PlaneModel $model = null)
+    {
+        $this->model = $model;
+
+        return $this;
+    }
+
+    /**
+     * Get model
+     *
+     * @return \WCS\CoavBundle\Entity\PlaneModel 
+     */
+    public function getModel()
+    {
+        return $this->model;
     }
 }
