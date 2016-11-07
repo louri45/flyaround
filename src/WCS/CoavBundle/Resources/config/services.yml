@@ -3,7 +3,7 @@ services:
     app.admin.terrain:
         class: WCS\CoavBundle\Admin\TerrainAdmin
         tags:
-            - { name: sonata.admin, manager_type: orm, group: "Content", label: "Terrain" }
+            - { name: sonata.admin, manager_type: orm, group: "un terme plus parlant", label: "Terrain" }
         arguments:
             - ~
             - WCS\CoavBundle\Entity\Terrain
@@ -12,7 +12,7 @@ services:
     app.admin.flight:
         class: WCS\CoavBundle\Admin\FlightAdmin
         tags:
-            - { name: sonata.admin, manager_type: orm, group: "Content", label: "Flight" }
+            - { name: sonata.admin, manager_type: orm, group: "un terme plus parlant", label: "Flight" }
         arguments:
             - ~
             - WCS\CoavBundle\Entity\Flight
@@ -21,7 +21,7 @@ services:
     app.admin.planemodel:
         class: WCS\CoavBundle\Admin\PlaneModelAdmin
         tags:
-            - { name: sonata.admin, manager_type: orm, group: "Content", label: "PlaneModel" }
+            - { name: sonata.admin, manager_type: orm, group: "un terme plus parlant", label: "PlaneModel" }
         arguments:
             - ~
             - WCS\CoavBundle\Entity\PlaneModel
@@ -30,7 +30,7 @@ services:
     app.admin.reservation:
         class: WCS\CoavBundle\Admin\ReservationAdmin
         tags:
-            -  { name: sonata.admin, manager_type: orm, group: "Content", label: "Reservation" }
+            -  { name: sonata.admin, manager_type: orm, group: "un terme plus parlant", label: "Reservation" }
         arguments:
             - ~
             - WCS\CoavBundle\Entity\Reservation
@@ -39,7 +39,7 @@ services:
     app.admin.user:
         class: WCS\CoavBundle\Admin\UserAdmin
         tags:
-            - { name: sonata.admin, manager_type: orm, group: "Content", label: "User" }
+            - { name: sonata.admin, manager_type: orm, group: "un terme plus parlant", label: "User" }
         arguments:
             - ~
             - WCS\CoavBundle\Entity\User

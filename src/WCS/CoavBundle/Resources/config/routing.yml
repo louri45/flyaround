@@ -21,7 +21,3 @@ wcs_coav_reservation:
 wcs_coav_user:
         resource: "@WCSCoavBundle/Resources/config/routing/user.yml"
         prefix:   /user
-
-wcs_coav_user:
-        resource: "@WCSCoavBundle/Resources/config/routing/terrain.yml"
-        prefix:   /terrain

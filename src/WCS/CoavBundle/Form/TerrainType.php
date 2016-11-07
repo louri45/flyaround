@@ -6,7 +6,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class FlightType extends AbstractType
+class TerrainType extends AbstractType
 {
     /**
      * @param FormBuilderInterface $builder
@@ -15,12 +15,14 @@ class FlightType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('departure')
-            ->add('arrival')
-            ->add('pilot')
-            ->add('freeSeats')
-            ->add('takeofTime', 'datetime')
-            ->add('model')
+            ->add('name')
+            ->add('icao')
+            ->add('latitude')
+            ->add('longitude')
+            ->add('city')
+            ->add('country')
+            ->add('departures')
+            ->add('arrivals')
         ;
     }
     
@@ -30,7 +32,7 @@ class FlightType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'WCS\CoavBundle\Entity\Flight'
+            'data_class' => 'WCS\CoavBundle\Entity\Terrain'
         ));
     }
 }
